@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!--    Для индексации-->
-    <title>Файлы</title>
+    <title>Файлы | by torear</title>
     <meta name="keywords" content="файлы, torear, torear797,"/>
     <meta name="description" content="Файлы | by torear"/>
 
     <!--    og разметка-->
-    <meta property="og:title" content="Файлы"/>
+    <meta property="og:title" content="Файлы | by torear"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://torear797.github.io/files/"/>
     <meta property="og:description" content="Файлы| by torear"/>
-    <meta property="og:site_name" content="Файлы"/>
+    <meta property="og:site_name" content="Файлы | by torear"/>
 
     <link rel="apple-touch-icon" href="public/img/pwa_icons/180x180.png"/>
     <link rel="icon" href="public/img/pwa_icons/44x44.png" type="image/x-icon">
@@ -7672,15 +7672,11 @@
 
         body {
             margin: 0;
+            font-family: 'Roboto', 'Helvetica', sans-serif;
         }
 
         .background-Grey {
             background-color: #f3f3f3 !important;
-        }
-
-        /*Фон полосы меню*/
-        .mdl-layout__container {
-            font-family: 'Roboto', 'Helvetica', sans-serif;
         }
     </style>
 
@@ -7979,29 +7975,87 @@
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <div class="mdl-layout__content background-Grey" id="content">
-        <!--            JS-->
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="margin: 5% auto">
+            <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Название</th>
+                <th>Описание</th>
+                <th>Размер</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr onclick="window.location.href='files/BOOTICE_v1.3.4.0.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">BOOTICE_v1.3.4.0.zip</td>
+                <td></td>
+                <td>879 КБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/ccsetup577.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">ccsetup577.zip</td>
+                <td></td>
+                <td>27,5 МБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/DWS.exe'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">DWS.exe</td>
+                <td></td>
+                <td>320 КБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/FSCapture.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">FSCapture.zip</td>
+                <td></td>
+                <td>5,56 МБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/kms.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">kms.zip</td>
+                <td></td>
+                <td>10,7 МБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/Lock_Screen_Disable.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">Lock_Screen_Disable.zip</td>
+                <td></td>
+                <td>358 байт</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/Lock_Screen_Enable.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">Lock_Screen_Enable.zip</td>
+                <td></td>
+                <td>313 байт</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/SAM.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">SAM.zip</td>
+                <td></td>
+                <td>49,4 КБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/TileIconifier.exe'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">TileIconifier.exe</td>
+                <td></td>
+                <td>3,29 МБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/uplayachievements.rar'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">uplayachievements.rar</td>
+                <td></td>
+                <td>120 КБ</td>
+            </tr>
+
+            <tr onclick="window.location.href='files/WRCFree_10.3.4.693.zip'; return false" class="cursor-pointer">
+                <td class="mdl-data-table__cell--non-numeric">WRCFree_10.3.4.693.zip</td>
+                <td></td>
+                <td>4,42 МБ</td>
+            </tr>
+
+            </tbody>
+        </table>
     </div>
 </div>
 
 </body>
 
-<script type="text/javascript">
-    const xhr = new XMLHttpRequest();
-
-    ReplaceBlock("home", false);
-
-    function ReplaceBlock(id, isOpenMenu = true) {
-        xhr.open('GET', 'app/views/' + id + '.html', true);
-        xhr.send();
-
-        xhr.onreadystatechange = function () {
-            if (this.readyState !== 4) return;
-
-            if (xhr.status === 200 && document.getElementById("content").innerHTML !== xhr.response) {
-                document.getElementById("content").innerHTML = xhr.response
-                document.getElementById("content").scrollTop = 0;
-            }
-        };
-    }
-</script>
 </html>
